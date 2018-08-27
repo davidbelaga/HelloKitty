@@ -12,4 +12,17 @@
  *
  *= require_tree .
  *= require_self
+
+ *= require bootstrap/css/bootstrap.min
+
+ *= require boomerang/css/template
+ *= require boomerang/css/plugins.min
+ *= require boomerang/css/magnific-popup
+ *= require boomerang/css/prism
+ *= require boomerang/css/simple-line-icons
+ *= require boomerang/css/template.min
+ *= require boomerang/css/vertical
+
+
+
  */
