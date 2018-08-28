@@ -8,7 +8,7 @@ class CartsController < ApplicationController
     @cart = current_cart
     @cart << Item.find(params[:id])
     flash.now[:notice] = "Item added to your cart"
-    redirect_to items_path
+    items_path
   end
 
   def total_price
@@ -16,7 +16,14 @@ class CartsController < ApplicationController
     @cart.items.to_a.sum { |item| item.price }
   end
 
+  private
+
   def current_cart
-    Cart.find_by user_id: current_user.id
+    if Cart.find_by user_id: current_user.id
+      Cart.find_by user_id: current_user.id
+    else
+      Cart.create(user_id: current_user.id)
+    end
   end
+
 end
