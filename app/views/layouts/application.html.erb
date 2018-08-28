@@ -23,7 +23,6 @@
   </head>
 
   <body>
-    <%= render 'shared/preloader' %>
 
 
     <!-- Wrapper-->
@@ -31,6 +30,7 @@
     <%= render 'shared/header' %>
     <%= render 'shared/error'  %>
     <%= yield %>
+    <%= render 'items/components/sidebar' %>
     <%= render 'shared/footer' %>
     </div>
     <!-- Wrapper end-->
