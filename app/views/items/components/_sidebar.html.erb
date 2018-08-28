@@ -1,0 +1,38 @@
+<!-- Off canvas-->
+<div class="off-canvas-sidebar">
+  <div class="off-canvas-sidebar-wrapper">
+    <div class="off-canvas-header"><a class="off-canvas-close" href="#"><span class="ti-close"></span></a></div>
+      <div class="off-canvas-content">
+        <!-- Text widget-->
+        <aside class="widget widget-text">
+          <div class="textwidget">
+            <p class="text-center"><%= image_tag('menu-chat-2.jpg', width: "80") %></p>
+             <% if user_signed_in? %>
+                <p class="text-center">Hi there ! <br>
+                 Check your profile & settings here</p>
+
+                 <div class="list-group">
+                    <a href="<%= new_user_session_path %>" class="list-group-item list-group-item-action list-group-item-light">My orders</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-light">My settings</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-light">Log out</a>
+                  </div>
+               <% else %>
+                 <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-light">Log in</a>
+                    <a href="<%= new_user_session_path %>" class="list-group-item list-group-item-action list-group-item-light">Sign in</a>
+                  </div>
+                <% end %>
+              </div>
+            </aside>
+
+
+            <!-- Social Icons-->
+            <ul class="social-icons text-center">
+                <li><a href="https://twitter.com/RealGrumpyCat?lang=fr"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/cats/"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/this.is.cats.world/"><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Off canvas end-->
